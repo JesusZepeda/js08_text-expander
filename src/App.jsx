@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./App.css";
+// import "./App.css";
 
 export default function App() {
   return (
     <div>
-      <TextExpander>
+      <TextExpander className={"box"}>
         Space travel is the ultimate adventure! Imagine soaring past the stars
         and exploring new worlds. It's the stuff of dreams and science fiction,
         but believe it or not, space travel is a real thing. Humans and robots
@@ -46,6 +46,7 @@ function TextExpander({
 }) {
   const [isExpanded, setIsExpanded] = useState(expanded);
 
+  // const displayText = isExpanded ? children : "test";
   const displayText = isExpanded
     ? children
     : children.split(" ").slice(0, collapsedNumWords).join(" ") + "...";
